@@ -1,0 +1,17 @@
+<juegoMesa>
+<titulo>Unánimo</titulo>
+<precio moneda = "euro">13,95</precio>
+<imagenes>
+    <imagen>imagen1</imagen>
+    <imagen>imagen2</imagen>
+    <imagen>imagen3</imagen>
+    <imagen>imagen4</imagen>
+    <imagen>imagen5</imagen>
+    <imagen>imagen6</imagen>
+    <imagen>imagen7</imagen>
+    <imagen>imagen8</imagen>
+    <imagen>imagen9</imagen>
+    <imagen>imagen10</imagen>
+</imagenes>
+<descripcion>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, dicta!</descripcion>
+</juegoMesa>
