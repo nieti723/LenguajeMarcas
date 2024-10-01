@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 4 | Ejercicio 4</title>
+    <style>
+        table,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 2px;
+        }
+        table{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rutas</h1>
+    <table>
+        <tr>
+            <td>Documento Orígen</td>
+            <td>Documento Destino</td>
+            <td>href=""</td>
+        </tr>
+        <tr>
+            <td>arrel.html</td>
+            <td>textual.html</td>
+            <td>subdir/direct/textual.html</td>
+        </tr>
+        <tr>
+            <td>docu.html</td>
+            <td>llista.html</td>
+            <td>llista.html</td>
+        </tr>
+        <tr>
+            <td>docu.html</td>
+            <td>arrel.html</td>
+            <td>../arrel.html</td>
+        </tr>
+        <tr>
+            <td>carta.html</td>
+            <td>prova.html</td>
+            <td>../prova/prova.html</td>
+        </tr>
+        <tr>
+            <td>carta.html</td>
+            <td>docu.html</td>
+            <td>../subdir/docu.html</td>
+        </tr>
+        <tr>
+            <td>textual.html</td>
+            <td>arrel.html</td>
+            <td>../../arrel.html</td>
+        </tr>
+        <tr>
+            <td>textual.html</td>
+            <td>prova.html</td>
+            <td>../../prova/prova.html</td>
+        </tr>
+    </table>
+</body>
+</html>
