@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.navbar{
+    background-color: green;
+    margin: 20px;
+}
+
+.main{
+    border: 1px solid black;
+    margin: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 350px;
+}
+
+.section{
+    margin: 10px;
+    height: 150px;
+    line-height: 150px;
+}
+
+.section1{
+    background-color: red;
+}
+
+.section2{
+    float: left;
+    background-color: orange;
+    width: 48%;
+    margin-bottom: 10px;
+}
+
+.section3{
+    float: right;
+    background-color: pink;
+    width: 48%;
+    margin-bottom: 10px;
+}
+
+footer{
+    background-color: blue;
+    margin: 20px;
+}
