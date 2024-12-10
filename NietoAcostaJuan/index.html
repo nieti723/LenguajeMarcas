@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EXAMEN DAW - Juegos de Mesa</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Encabezado de la página -->
+    <header>
+      <h1>Examen DAW - Juegos de Mesa</h1>
+    </header>
+    <!-- Barra de navegación en la que están los enlaces (no van a ningún sitio) -->
+    <div class="navbar">
+      <a href="">Inicio</a>
+      <a href="">Juegos</a>
+      <a href="">Opiniones</a>
+      <a href="">Contacto</a>
+    </div>
+    <!-- Pongo un div de columna-izquierda para agrupar todos los elementos de la izquierda y que se divida la página en dos columnas -->
+    <div class="columna-izquierda">
+      <table>
+        <tr>
+          <th>Juego</th>
+          <th>Categoría</th>
+          <th>Duración</th>
+        </tr>
+        <tr>
+          <td>Catan</td>
+          <td>Estrategia</td>
+          <td>90 minutos</td>
+        </tr>
+        <tr>
+          <td>Carcassonne</td>
+          <td>Contrucción</td>
+          <td>45 minutos</td>
+        </tr>
+        <tr>
+          <td>Azul</td>
+          <td>Abstracto</td>
+          <td>30 minutos</td>
+        </tr>
+      </table>
+      <div class="imagenes">
+        <img src="images/catan.jpg" alt="" />
+        <img src="images/carcasone.jpg" alt="" />
+        <img src="images/azul.jpg" alt="" />
+      </div>
+
+      <ul>
+        <li>Dominion</li>
+        <li>Gloomhaven</li>
+        <li>Terraforming Mars</li>
+        <li>7 Wonders</li>
+        <li>Ticket to Ride</li>
+        <li>Wingspan</li>
+        <li>Kingdomino</li>
+      </ul>
+      <ol>
+        <li>Uno</li>
+        <li>Monopoly</li>
+        <li>Scrabble</li>
+        <li>Risk</li>
+        <li>Clue</li>
+        <li>Life</li>
+        <li>Yahtzee</li>
+      </ol>
+    </div>
+
+    <!-- Este engloba los elementos de la derecha (aunque no sería necesario ya que solo hay un form q ya engloba a todo) -->
+    <div class="columna-derecha">
+      <form action="" method="get">
+        <fieldset>
+          <legend>Datos Personales</legend>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" />
+          <label for="apellidos">Apellidos:</label>
+          <input type="text" id="apellidos" />
+          <label for="dni">DNI:</label>
+          <input type="text" id="dni" />
+          <label for="edad">Edad:</label>
+          <input type="text" id="edad" />
+          <label for="email">Correo electrónico:</label>
+          <input type="text" id="email" />
+          <label for="sexo">Sexo:</label>
+          <select name="sexo" id="sexo">
+            <option value="">Masculino</option>
+            <option value="">Femenino</option>
+            <option value="">Otro</option>
+            <option value="">Prefiero no decirlo</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>Datos del Juego</legend>
+          <label for="puntuacion">Puntuacion(1-5):</label>
+          <select name="puntuacion" id="puntuacion">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <label for="opinion">Opinion:</label>
+          <textarea name="opinion" id="opinion"></textarea>
+        </fieldset>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+    <!-- Pie de página (podría ir en cualquier otro lugar ya que está fijo abajo) -->
+    <footer>
+      <p>Realizado por Juan Nieto Acosta</p>
+    </footer>
+  </body>
+</html>

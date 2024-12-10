@@ -1,0 +1,133 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+body {
+  background-color: #cccccc;
+}
+
+header {
+  background-color: #add8e6;
+  text-align: center;
+  height: 70px;
+  /*Line-height lo uso en varias ocasiones para centrar el texto verticalmente dándole a la línea la misma altura que tiene el contenedor (sé que hay mejores opciones pero es la que hemos dados hasta ahora)*/
+  line-height: 70px;
+}
+
+.navbar {
+  background-color: #333333;
+  padding: 5px;
+}
+
+.navbar a {
+  /*Aquí pongo inline para que los enlaces (elementos en bloque) se coloquen en la misma línea uno detrás de otro*/
+  display: inline;
+  margin: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.columna-izquierda {
+  float: left;
+  width: 50%;
+}
+
+table {
+  margin: 20px;
+  width: 100%;
+}
+/*Aquí le doy borde a todos los elementos de la tabla y a esta misma y permito que colapsen para que no se vea doble borde*/
+table,
+td,
+th {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+th {
+  background-color: #f4f4f4;
+  text-align: left;
+}
+
+td {
+  background-color: #f5f5dc;
+}
+
+img {
+  /*El float lo uso para que las imágenes se coloquen como se ven en el enunciado, ya que así empiezan todas desde el mismo punto*/
+  margin: 20px;
+  width: 25%;
+  float: left;
+}
+
+ul {
+  background-color: #3f51b5;
+  /* Uso clear para que sigan el flujo HTML normal, así no debería de dar problemas y se pone debajo del elemento anterior  */
+  clear: both;
+  float: left;
+  width: 39%;
+  margin: 10px;
+  margin-left: 20px;
+  height: 140px;
+  padding: 15px;
+  padding-left: 30px;
+}
+
+ol {
+  float: left;
+  background-color: #009688;
+  width: 39%;
+  margin: 10px;
+  height: 140px;
+  padding: 15px;
+  padding-left: 30px;
+  /*Este margin es para que las dos listas tengan el mismo margen a la izquierda cuando la página mengua y se ponen uno debajo del otro*/
+  margin-left: 20px;
+}
+
+.columna-derecha {
+  float: right;
+  width: 40%;
+}
+
+form {
+  background-color: #f5f5dc;
+  margin: 30px;
+  padding: 5px;
+}
+
+input,
+button,
+select,
+textarea {
+  width: 85%;
+  background-color: white;
+  margin-block: 10px;
+  height: 20px;
+}
+
+button {
+  background-color: #efefef;
+}
+
+label {
+  /*El block lo uso para que los elementos queden uno debajo del otro ya que los label son elementos en línea*/
+  display: block;
+}
+
+footer {
+  /*Aquí fijo la posición del footer abajo dejando un pequeño margen de 5px para que no se vea tan forzado*/
+  position: fixed;
+  bottom: 5px;
+  background-color: #f0f0f0;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
