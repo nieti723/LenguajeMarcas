@@ -1,19 +1,48 @@
 *{
     margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    position: fixed;
+    background-color: #8377D1;
 }
 
 a{
     text-decoration: none;
-    color: black;
-}
-
-.navbar{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    color: #CBC9C2;
 }
 
 .logo-navbar{
-    width: 100px;
+    width: 70px;
     border-radius: 50px;
+    float: left;
+    margin: 20px;
+}
+
+.titulo{
+    float: left;
+    margin-left: 30px;
+}
+
+.enlaces{
+    float: left;
+    margin-left: 200px;
+}
+
+.enlaces a{
+    margin-inline: 20px;
+}
+
+.enlaces a:hover{
+    text-decoration: underline;
+}
+
+.noticias{
+    position: relative;
+    top: 150px;
 }
