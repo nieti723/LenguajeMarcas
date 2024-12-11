@@ -1,48 +1,131 @@
-*{
-    margin: 0;
-    font-family: sans-serif;
-    box-sizing: border-box;
+:root {
+  --lila: #8377d1;
+  --blanco-roto: #cbc9c2;
+  --azul-grisaceo: #446069;
+  --azul-oscuro: #1a1b41;
+  --fondo: #bff5cb;
 }
 
-header{
-    width: 100%;
-    height: 100px;
-    line-height: 100px;
-    position: fixed;
-    background-color: #8377D1;
+body {
+  background-color: var(--fondo);
 }
 
-a{
-    text-decoration: none;
-    color: #CBC9C2;
+* {
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
 }
 
-.logo-navbar{
-    width: 70px;
-    border-radius: 50px;
-    float: left;
-    margin: 20px;
+header {
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  position: sticky;
+  top: 0px;
+  background-color: var(--lila);
+  z-index: 3;
 }
 
-.titulo{
-    float: left;
-    margin-left: 30px;
+a {
+  text-decoration: none;
+  color: var(--blanco-roto);
 }
 
-.enlaces{
-    float: left;
-    margin-left: 200px;
+.logo-navbar {
+  width: 3.5%;
+  border-radius: 50px;
+  float: left;
+  margin: 20px;
 }
 
-.enlaces a{
-    margin-inline: 20px;
+.titulo {
+  float: left;
+  margin-left: 5%;
+  width: 30%;
 }
 
-.enlaces a:hover{
+.enlaces {
+  float: right;
+  width: 53%;
+  margin-left: 5%;
+}
+
+.enlaces a {
+  margin-inline: 2%;
+}
+
+.enlaces a:hover {
+  text-decoration: underline;
+}
+
+.seccion {
+  float: left;
+  margin: 1%;
+  text-align: center;
+  width: 31.3%;
+  background-color: var(--azul-oscuro);
+  color: var(--blanco-roto);
+  border-radius: 10px;
+}
+
+.seccion h1 {
+  margin: 10px;
+}
+
+.noticias {
+  clear: both;
+}
+
+.noticia,
+.video,
+.foto {
+  margin: 20px;
+  text-align: center;
+  background-color: var(--lila);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.seccion h3 {
+  text-align: center;
+  margin: 20px;
+}
+
+.seccion img {
+  width: 80%;
+}
+
+.seccion iframe {
+  width: 80%;
+  height: 300px;
+}
+
+.fotos {
+  float: right;
+}
+
+img:hover {
+  box-shadow: 5px 5px 4px rgb(75, 75, 75);
+  transform: scale(1.01);
+}
+
+.no-bg:hover{
+    box-shadow: none;
+    filter: drop-shadow(5px 5px 4px rgb(75, 75, 75));
+}
+
+footer{
+    padding: 30px;
+    clear: both;
+    background-color: var(--lila);
+    text-align: center;
+}
+
+footer a{
+    color: black;
+}
+
+footer a:hover{
     text-decoration: underline;
-}
-
-.noticias{
-    position: relative;
-    top: 150px;
+    color: var(--blanco-roto);
 }
