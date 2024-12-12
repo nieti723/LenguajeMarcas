@@ -1,5 +1,10 @@
 @import url(index.css);
 
+
+header{
+  position: relative;
+}
+
 .pagina {
   margin: 30px;
 }
@@ -9,14 +14,16 @@
 }
 
 .menu{
+  clear: both;
   float: left;
   width: 13%;
-  margin: 2%;
+  margin: 1%;
+  margin-left: 3%;
   background-color: var(--blanco-roto);
   padding: 20px;
   border-radius: 10px;
   position: sticky;
-  top: 100px;
+  top: 20px;
 }
 
 .menu a {
@@ -41,12 +48,13 @@
 .categoria {
   margin: 20px;
   background-color: var(--lila);
+  color: var(--blanco-roto);
   border-radius: 10px;
   padding: 20px;
 }
 
 .categoria h3 {
-  color: white;
+  color: var(--azul-grisaceo);
 }
 
 .contenido {
@@ -62,7 +70,8 @@
 }
 
 .ejemplos img {
-  width: 200px;
-  margin-inline: 20px;
+  width: 250px;
+  height: 200px;
+  margin: 20px;
 }
 
