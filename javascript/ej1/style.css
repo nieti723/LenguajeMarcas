@@ -1,0 +1,28 @@
+.error {
+  border: 1px solid red;
+  color: red;
+}
+
+.color {
+  color: aquamarine;
+}
+
+.azul{
+    color: blue;
+}
+
+.amarillo{
+    color: yellow;
+}
+
+.morado{
+    color: purple;
+}
+
+.rojo{
+    color: red;
+}
+
+.rosa{
+    color: pink;
+}
