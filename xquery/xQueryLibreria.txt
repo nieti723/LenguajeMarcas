@@ -1,0 +1,11 @@
+1.- for $b in doc("libreria.xml")// libreria/libro return $b/titulo/text()
+2.- for $b in doc("libreria.xml")// libreria/libro where $b/precio<=30 return $b
+3.- for $b in doc("libreria.xml")// libreria/libro where $b/precio<=30 return $b/titulo
+4.- for $b in doc("libreria.xml")// libreria/libro where $b/precio<=30 return $b/titulo/text()
+5.- for $b in doc("libreria.xml")// libreria/libro where $b/año=2005 return <lib2005>Titulo: {$b/titulo/text()}, Autor: {$b/autor/text()}</lib2005>
+6.- let $años := libreria/libro/año return <publicacion>{$años/text()}</publicacion>
+7.- for $lib in doc("libreria.xml")//libreria/libro order by @categoria, $lib/titulo return $lib
+8.- for $lib in doc("libreria.xml")//libreria let $c := $lib/libro return <total>{count($c)}</total>
+9.- for $lib in doc("libreria.xml")//libreria let $c := $lib/libro return ($c/titulo/text(), <total>{count($c)}</total>)
+10.- let $lib := libreria/libro let $min := min($lib/precio) let $max := max($lib/precio) return (<PrecioMax>{$max}</PrecioMax>, <PrecioMin>{$min}</PrecioMin>)
+11.- 
