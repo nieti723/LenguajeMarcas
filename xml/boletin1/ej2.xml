@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../style/styleEj2.css" type="text/css"?>
+<!DOCTYPE aula [
+<!ELEMENT aula (alumno)>
+<!ELEMENT alumno (dni, nombre, apellidos, sexo, fechaNacimiento, direccion, telefono, notaMedia)>
+<!ELEMENT dni EMPTY>
+<!ATTLIST dni valor CDATA #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT sexo EMPTY>
+<!ATTLIST sexo valor CDATA #REQUIRED>
+<!ELEMENT fechaNacimiento (dia, mes, anio)>
+<!ELEMENT dia (#PCDATA)>
+<!ELEMENT mes (#PCDATA)>
+<!ELEMENT anio (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ATTLIST telefono tipo CDATA #REQUIRED>
+<!ELEMENT notaMedia (#PCDATA)>
+]>
+<aula>
+  <alumno>
+    <dni valor="12141431F"/>
+    <nombre>Juan</nombre>
+    <apellidos>Nieto Acosta</apellidos>
+    <sexo valor="masculino"/>
+    <fechaNacimiento>
+      <dia>22</dia>
+      <mes>12</mes>
+      <anio>2004</anio>
+    </fechaNacimiento>
+    <direccion>Fray Cipriano de Utrera, 9</direccion>
+    <telefono tipo="móvil">684014742</telefono>
+    <notaMedia>9</notaMedia>    
+    </alumno>
+</aula>
