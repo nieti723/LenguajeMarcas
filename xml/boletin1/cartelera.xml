@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE peliculas [
+    <!ELEMENT peliculas (pelicula+)>
+    <!ELEMENT pelicula (estreno, titulo, nacionalidad, duracion, director, actores, descipcion)>
+    <!ELEMENT estreno EMPTY>
+    <!ATTLIST estreno valor CDATA #REQUIRED>
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT nacionalidad (#PCDATA)>
+    <!ELEMENT duracion (hora, minutos)>
+    <!ELEMENT hora (#PCDATA)>
+    <!ELEMENT minutos (#PCDATA)>
+    <!ELEMENT director (#PCDATA)>
+    <!ELEMENT actores (actor+)>
+    <!ELEMENT actor (nombre, personaje)>
+    <!ATTLIST actor tipo CDATA #REQUIRED>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT personaje (#PCDATA)>
+    <!ELEMENT descipcion (#PCDATA)>
+]>
+<peliculas>
+    <pelicula>
+        <estreno valor="2004"/>
+        <titulo>El señor de los anillos: El retorno del rey</titulo>
+        <nacionalidad>Estados Unidos</nacionalidad>
+        <duracion>
+            <hora>3</hora>
+            <minutos>21</minutos>
+        </duracion>
+        <director>Peter Jackson</director>
+        <actores>
+            <actor tipo="principal">
+                <nombre>Viggo Mortensen</nombre>
+                <personaje>Aragorn</personaje>
+            </actor>
+            <actor tipo="principal">
+                <nombre>Elijah Wood</nombre>
+                <personaje>Frodo</personaje> 
+            </actor>
+            <actor tipo="principal">
+                <nombre>Sean Astin</nombre>
+                <personaje>Sam</personaje>
+            </actor>
+        </actores>
+        <descipcion>El último capítulo de la trilogía de El señor de los anillos. La oscuridad se cierne sobre la Tierra Media. Aragorn se enfrenta a su destino mientras Sauron concentra sus esfuerzos en Minas Tirith, la capital de Gondor. El último gran combate por la Tierra Media está a punto de comenzar, y Frodo y Sam llegan a Mordor para destruir el Anillo Único.</descipcion>
+    </pelicula>
+</peliculas>
