@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE escuela [
+<!ELEMENT escuela (cursos)>
+<!ELEMENT cursos (curso)>
+<!ELEMENT curso (id, nombre, duracion, descripcion, becas, aula, precio, semana+, profesores, temas)>
+<!ELEMENT id EMPTY>
+<!ATTLIST id valor CDATA #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT duracion (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT becas EMPTY>
+<!ELEMENT aula (numPlanta, numAula)>
+<!ATTLIST aula informatica CDATA #REQUIRED>
+<!ELEMENT numPlanta (#PCDATA)>
+<!ELEMENT numAula (#PCDATA)>
+<!ELEMENT precio (precioAntiguosAlumnos, precioNuevosAlumnos)>
+<!ELEMENT precioAntiguosAlumnos (#PCDATA)>
+<!ELEMENT precioNuevosAlumnos (#PCDATA)>
+<!ELEMENT semana (inicio, fin)>
+<!ATTLIST semana horario CDATA #REQUIRED>
+<!ELEMENT inicio (dia, mes, anio)>
+<!ELEMENT fin (dia, mes, anio)>
+<!ELEMENT dia (#PCDATA)>
+<!ATTLIST dia valor CDATA #REQUIRED>
+<!ELEMENT mes (#PCDATA)>
+<!ATTLIST mes valor CDATA #REQUIRED>
+<!ELEMENT anio (#PCDATA)>
+<!ATTLIST anio valor CDATA #REQUIRED>
+<!ELEMENT profesores (profesor+, profesor+)>
+<!ELEMENT profesor (nombre, apellidos)>
+<!ATTLIST profesor tipo CDATA #REQUIRED>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT temas (tema+)>
+<!ELEMENT tema (titulo, resumen, keyWords, ejercicios)>
+<!ATTLIST tema numero CDATA #REQUIRED>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT resumen (#PCDATA)>
+<!ELEMENT keyWords (#PCDATA)>
+<!ELEMENT ejercicios (practicos, teoricos)>
+<!ELEMENT practicos (numero, duracion)>
+<!ELEMENT numero (#PCDATA)>
+<!ATTLIST numero valor CDATA #REQUIRED>
+<!ATTLIST duracion valor CDATA #REQUIRED>
+<!ELEMENT teoricos (numero, duracion)>
+<!ATTLIST numero valor CDATA #REQUIRED>
+<!ATTLIST duracion valor CDATA #REQUIRED>
+]>
+
+<escuela>
+  <cursos>
+    <curso>
+      <id valor="0" />
+      <nombre>1º DAW</nombre>
+      <duracion valor="2000 horas"/>
+      <descripcion>Primer año de un curso donde aprenderemos todas las bases sobre la programación
+        web</descripcion>
+      <becas />
+      <aula informatica="si">
+        <numPlanta>2</numPlanta>
+        <numAula>CF_9</numAula>
+      </aula>
+      <precio>
+        <precioAntiguosAlumnos>70€</precioAntiguosAlumnos>
+        <precioNuevosAlumnos>100€</precioNuevosAlumnos>
+      </precio>
+      <semana horario="mañana">
+        <inicio>
+          <dia valor="12"/>
+          <mes valor="septiembre"/>
+          <anio valor="2022"/>
+        </inicio>
+        <fin>
+          <dia valor="12"/>
+          <mes valor="junio"/>
+          <anio valor="2023"/>
+        </fin>
+      </semana>
+      <semana horario="tarde">
+        <inicio>
+          <dia valor="25"/>
+          <mes valor="octubre"/>
+          <anio valor="2023"/>
+        </inicio>
+        <fin>
+          <dia valor="24"/>
+          <mes valor="junio"/>
+          <anio valor="2024"/>
+        </fin>
+      </semana>
+      <semana horario="mañana">
+        <inicio>
+          <dia valor="12"/>
+          <mes valor="febrero"/>
+          <anio valor="2024"/>
+        </inicio>
+        <fin>
+          <dia valor="16"/>
+          <mes valor="julio"/>
+          <anio valor="2024"/>
+        </fin>
+      </semana>
+      <profesores>
+        <profesor tipo="teoria">
+          <nombre>Manuel</nombre>
+          <apellidos>García</apellidos>
+        </profesor>
+        <profesor tipo="prácticas">
+          <nombre>Antonio</nombre>
+          <apellidos>García</apellidos>
+        </profesor>
+      </profesores>
+      <temas>
+        <tema numero="1">
+          <titulo>HTML</titulo>
+          <resumen>Primer tema donde aprenderemos a crear páginas web</resumen>
+          <keyWords>HTML, web, páginas</keyWords>
+          <ejercicios>
+            <practicos>
+              <numero valor="3"/>
+              <duracion valor="2 horas"/>
+            </practicos>
+            <teoricos>
+              <numero valor="3"/>
+              <duracion valor="1 hora"/>
+            </teoricos>
+          </ejercicios>
+        </tema>
+        <tema numero="1">
+          <titulo>BBDD</titulo>
+          <resumen>Aprenderemos todo sobre la gestión de BBDD</resumen>
+          <keyWords>SQL, Mongo, MySQL</keyWords>
+          <ejercicios>
+            <practicos>
+              <numero valor="2"/>
+              <duracion valor="3 horas"/>
+            </practicos>
+            <teoricos>
+              <numero valor="1"/>
+              <duracion valor="3 horas"/>
+            </teoricos>
+          </ejercicios>
+        </tema>
+      </temas>
+    </curso>
+  </cursos>
+</escuela>

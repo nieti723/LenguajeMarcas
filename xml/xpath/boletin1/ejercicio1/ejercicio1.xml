@@ -1,0 +1,21 @@
+<ies>
+    <nombre>IES Ciudad de Córdoba</nombre>
+    <web>http://iesciudaddecordoba.es/</web>
+    <ciclos>
+        <ciclo id="ASIR">
+            <nombre>Administración de Sistemas Informáticos en Red</nombre>
+            <grado>Superior</grado>
+            <ordenTitulo año="2010" />
+        </ciclo>
+        <ciclo id="DAM">
+            <nombre>Desarrollo de Aplicaciones Multiplataforma</nombre>
+            <grado>Superior</grado>
+            <ordenTitulo año="2011" />
+        </ciclo>
+        <ciclo id="SMR">
+            <nombre>Sistemas Microinformáticos y Redes</nombre>
+            <grado>Medio</grado>
+            <ordenTitulo año="2009" />
+        </ciclo>
+    </ciclos>
+</ies>
