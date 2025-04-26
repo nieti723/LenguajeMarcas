@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE equipos SYSTEM "ejercicio4.dtd">
+<equipos>
+    <equipo>
+        <nombre>El betis</nombre>
+        <nacionalidad>España</nacionalidad>
+        <presupuesto/>
+        <normal/>
+        <sweepers>
+            <sweeper dni = "53962293S">
+                <nombre>Juan</nombre>
+                <apellidos>Nieto Acosta</apellidos>
+                <edad>20</edad>
+                <sexo>Masculino</sexo>
+            </sweeper>
+        </sweepers>
+        <pista>
+            <nombre>Bernabeu</nombre>
+            <asientos>23</asientos>
+            <direccion>
+                <calle>Fray Cipriano de Utrera</calle>
+                <numero>9</numero>
+                <poblacion valor = "Utrera">
+                    <cp>41710</cp>
+                    <provincia>Sevilla</provincia>
+                </poblacion>
+            </direccion>
+        </pista>
+        <fechaFundacion>
+            <dia>22</dia>
+            <mes>12</mes>
+            <anyo>2004</anyo>
+        </fechaFundacion>
+    </equipo>
+</equipos>

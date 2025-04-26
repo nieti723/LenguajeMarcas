@@ -1,0 +1,7 @@
+<!ENTITY % p "(#PCDATA)">
+<!ELEMENT ejemplo (nombre, apellido, edad)>
+<!ELEMENT nombre %p;>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT edad %p;>
+<!NOTATION gif SYSTEM "imagen.gif">
+<!NOTATION jpg SYSTEM "imagen.jpg">
