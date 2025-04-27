@@ -3,7 +3,6 @@ function validarFormulario() {
     let alert = "";
     let cont = 0;
 
-
     if(!error('name')){
         cont++;
         alert += "nombre ";
