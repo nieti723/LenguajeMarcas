@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Ejercicio 3 - DOM basico y atributos XHTML</title>
+    <script type="text/javascript">
+      let texto =
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum molestiae laudantium vel eveniet mollitia sapiente odio est recusandae nisi. Temporibus cupiditate officiis repellat vitae corrupti perferendis voluptate at fugiat illo facilis sapiente praesentium, impedit dignissimos eum neque. Harum dolores corporis obcaecati ipsa consectetur, ratione nostrum autem! Dolorem, debitis? Assumenda quis, debitis quibusdam voluptate cum beatae odio quod impedit repellendus cumque inventore unde. Dolores provident ab fuga, perspiciatis ratione facere? Ratione magni ullam eius soluta molestias voluptatem harum modi architecto molestiae, delectus, dicta necessitatibus alias earum dolores doloribus corrupti in similique vel quod exercitationem quos aperiam facere! Architecto, cum quas.";
+      var palabras = texto.split(" ");
+      function mas() {
+        let contenido = "";
+        let size = parseInt(Math.random() * 3 + 3);
+        for (let i = 0; i < size; i++) {
+          contenido += " " + palabras[i];
+        }
+        palabras.splice(0, size);
+        contenido = contenido.charAt(1).toUpperCase() + contenido.slice(2);
+        let lista = document.getElementById("lista");
+        let elemento = document.createElement("li");
+        elemento.innerHTML = contenido;
+        lista.appendChild(elemento);
+      }
+    </script>
+  </head>
+  <body>
+    <ul id="lista">
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Consectetuer adipiscing elit</li>
+      <li>Sed mattis enim vitae orci</li>
+      <li>Phasellus libero</li>
+      <li>Maecenas nisl arcu</li>
+    </ul>
+    <input type="button" value="Sumar elemento" onclick="mas();" />
+  </body>
+</html>

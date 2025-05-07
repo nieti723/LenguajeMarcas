@@ -30,6 +30,11 @@ body{
     text-align: left;
 }
 
+#display:focus {
+    outline: 0;
+    caret-color: transparent;
+}
+
 .buttons{
     display: grid;
     grid-template-columns: repeat(4, 1fr);

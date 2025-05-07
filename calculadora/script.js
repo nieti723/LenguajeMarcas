@@ -1,9 +1,16 @@
 const display = document.getElementById('display');
 
+window.onload = function() {
+    display.focus();
+    clearDisplay();
+}
+
 document.addEventListener("keydown", function(event) {
-    console.log("Tecla presionada: " + event.key);
+    console.log(event.key);
     if (event.key === "Enter") {
         calculate();
+    } else if (event.key === "Delete") {
+        clearDisplay();
     }
 });
 
@@ -24,7 +31,6 @@ function calculate() {
     }
     try {
         display.value = eval(display.value);
-
     } catch (error) {
         display.value = 'Error';
     }

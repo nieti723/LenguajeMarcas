@@ -1,0 +1,232 @@
+<historial>
+    <mecanicos>
+        <mecanico nummec="v1" edad="22">
+            <nombremec>Antonio</nombremec>
+            <taller>Utrera</taller>
+        </mecanico>
+        <mecanico nummec="v2" edad="35">
+            <nombremec>Juan</nombremec>
+            <taller>Sevilla</taller>
+        </mecanico>
+        <mecanico nummec="v3" edad="31">
+            <nombremec>Manolo</nombremec>
+            <taller>Sevilla</taller>
+        </mecanico>
+        <mecanico nummec="v4" edad="28">
+            <nombremec>Jacinto</nombremec>
+            <taller>Utrera</taller>
+        </mecanico>
+        <mecanico nummec="v5" edad="33">
+            <nombremec>Roberto</nombremec>
+            <taller>Los Palacios</taller>
+        </mecanico>       
+    </mecanicos>
+    <piezas>
+        <pieza numpieza="p1">
+            <nombrepieza>Tuerca</nombrepieza>
+            <color>Rojo</color>
+            <cantidad>12</cantidad>
+            <taller>Utrera</taller>
+        </pieza>
+        <pieza numpieza="p2">
+            <nombrepieza>Perno</nombrepieza>
+            <color>Verde</color>
+            <cantidad>17</cantidad>
+            <taller>Sevilla</taller>
+        </pieza>
+        <pieza numpieza="p3">
+            <nombrepieza>Tornillo</nombrepieza>
+            <color>Azul</color>
+            <cantidad>17</cantidad>
+            <taller>Los Molares</taller>
+        </pieza>
+        <pieza numpieza="p4">
+            <nombrepieza>Cadena</nombrepieza>
+            <color>Rojo</color>
+            <cantidad>14</cantidad>
+            <taller>Utrera</taller>
+        </pieza>
+        <pieza numpieza="p5">
+            <nombrepieza>Leva</nombrepieza>
+            <color>Azul</color>
+            <cantidad>12</cantidad>
+            <taller>Sevilla</taller>
+        </pieza>
+        <pieza numpieza="p6">
+            <nombrepieza>Engranaje</nombrepieza>
+            <color>Rojo</color>
+            <cantidad>19</cantidad>
+            <taller>Utrera</taller>
+        </pieza>
+    </piezas>
+    <averias>
+        <averia numaveria="y1">
+            <nombreaveria>Alternador</nombreaveria>
+            <taller>Sevilla</taller>
+        </averia>
+        <averia numaveria="y2">
+            <nombreaveria>Aire Acondicionado</nombreaveria>
+            <taller>Los Molares</taller>
+        </averia>
+        <averia numaveria="y3">
+            <nombreaveria>Motor</nombreaveria>
+            <taller>Los Palacios</taller>
+        </averia>
+        <averia numaveria="y4">
+            <nombreaveria>Amortiguacion</nombreaveria>
+            <taller>Los Palacios</taller>
+        </averia>
+        <averia numaveria="y5">
+            <nombreaveria>Frenos</nombreaveria>
+            <taller>Utrera</taller>
+        </averia>
+        <averia numaveria="y6">
+            <nombreaveria>Chapa</nombreaveria>
+            <taller>El Palmar</taller>
+        </averia>
+        <averia numaveria="y7">
+            <nombreaveria>Ruedas</nombreaveria>
+            <taller>Utrera</taller>
+        </averia>
+    </averias>
+    <reparaciones>
+        <reparacion>
+            <nummec>v1</nummec>
+            <numpieza>p1</numpieza>
+            <numaveria>y1</numaveria>
+            <precio>200</precio>
+        </reparacion>
+        <reparacion>
+            <nummec>v1</nummec>
+            <numpieza>p1</numpieza>
+            <numaveria>y4</numaveria>
+            <precio>700</precio>
+        </reparacion>
+        <reparacion>
+            <nummec>v2</nummec>
+            <numpieza>p3</numpieza>
+            <numaveria>y1</numaveria>
+            <precio>400</precio>
+        </reparacion>
+        <reparacion>
+            <nummec>v2</nummec>
+            <numpieza>p3</numpieza>
+            <numaveria>y2</numaveria>
+            <precio>200</precio>
+        </reparacion>
+        <reparacion>
+            <nummec>v2</nummec>
+            <numpieza>p3</numpieza>
+            <numaveria>y3</numaveria>
+            <precio>300</precio>
+        </reparacion>
+        <reparacion>
+            <nummec>v2</nummec>
+            <numpieza>p3</numpieza>
+            <numaveria>y4</numaveria>
+            <precio>500</precio>
+        </reparacion>
+        <reparacion>
+            <nummec>v2</nummec>
+            <numpieza>p3</numpieza>
+            <numaveria>y5</numaveria>
+            <precio>600</precio>
+        </reparacion>
+        <reparacion>
+            <nummec>v2</nummec>
+            <numpieza>p3</numpieza>
+            <numaveria>y6</numaveria>
+            <precio>400</precio>
+        </reparacion>
+        <reparacion>
+            <nummec>v2</nummec>
+            <numpieza>p3</numpieza>
+            <numaveria>y7</numaveria>
+            <precio>600</precio>
+        </reparacion>
+        <reparacion>
+            <nummec>v2</nummec>
+            <numpieza>p5</numpieza>
+            <numaveria>y2</numaveria>
+            <precio>100</precio>
+        </reparacion>
+        <reparacion>
+            <nummec>v3</nummec>
+            <numpieza>p3</numpieza>
+            <numaveria>y1</numaveria>
+            <precio>200</precio>
+        </reparacion>
+        <reparacion>
+            <nummec>v3</nummec>
+            <numpieza>p4</numpieza>
+            <numaveria>y2</numaveria>
+            <precio>500</precio>
+        </reparacion>
+        <reparacion>
+            <nummec>v4</nummec>
+            <numpieza>p6</numpieza>
+            <numaveria>y3</numaveria>
+            <precio>300</precio>
+        </reparacion>
+        <reparacion>
+            <nummec>v4</nummec>
+            <numpieza>p6</numpieza>
+            <numaveria>y7</numaveria>
+            <precio>300</precio>
+        </reparacion>
+        <reparacion>
+            <nummec>v5</nummec>
+            <numpieza>p2</numpieza>
+            <numaveria>y2</numaveria>
+            <precio>200</precio>
+        </reparacion>
+        <reparacion>
+            <nummec>v5</nummec>
+            <numpieza>p2</numpieza>
+            <numaveria>y4</numaveria>
+            <precio>100</precio>
+        </reparacion>
+        <reparacion>
+            <nummec>v5</nummec>
+            <numpieza>p5</numpieza>
+            <numaveria>y5</numaveria>
+            <precio>500</precio>
+        </reparacion>
+        <reparacion>
+            <nummec>v5</nummec>
+            <numpieza>p6</numpieza>
+            <numaveria>y2</numaveria>
+            <precio>200</precio>
+        </reparacion>
+        <reparacion>
+            <nummec>v5</nummec>
+            <numpieza>p1</numpieza>
+            <numaveria>y4</numaveria>
+            <precio>100</precio>
+        </reparacion>
+        <reparacion>
+            <nummec>v5</nummec>
+            <numpieza>p3</numpieza>
+            <numaveria>y4</numaveria>
+            <precio>200</precio>
+        </reparacion>
+        <reparacion>
+            <nummec>v5</nummec>
+            <numpieza>p4</numpieza>
+            <numaveria>y4</numaveria>
+            <precio>800</precio>
+        </reparacion>
+        <reparacion>
+            <nummec>v5</nummec>
+            <numpieza>p5</numpieza>
+            <numaveria>y4</numaveria>
+            <precio>400</precio>
+        </reparacion>
+        <reparacion>
+            <nummec>v5</nummec>
+            <numpieza>p6</numpieza>
+            <numaveria>y4</numaveria>
+            <precio>500</precio>
+        </reparacion>
+    </reparaciones>
+</historial>
