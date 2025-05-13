@@ -1,0 +1,8 @@
+1.-
+declare option output:indent "yes";
+for $mecanico in //mecanico
+where $mecanico[@edad > 30]
+return concat($mecanico/taller/text(), ",") 
+
+2.-
+

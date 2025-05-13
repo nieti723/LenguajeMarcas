@@ -1,11 +1,137 @@
-1.- for $b in doc("libreria.xml")// libreria/libro return $b/titulo/text()
-2.- for $b in doc("libreria.xml")// libreria/libro where $b/precio<=30 return $b
-3.- for $b in doc("libreria.xml")// libreria/libro where $b/precio<=30 return $b/titulo
-4.- for $b in doc("libreria.xml")// libreria/libro where $b/precio<=30 return $b/titulo/text()
-5.- for $b in doc("libreria.xml")// libreria/libro where $b/año=2005 return <lib2005>Titulo: {$b/titulo/text()}, Autor: {$b/autor/text()}</lib2005>
-6.- let $años := libreria/libro/año return <publicacion>{$años/text()}</publicacion>
-7.- for $lib in doc("libreria.xml")//libreria/libro order by @categoria, $lib/titulo return $lib
-8.- for $lib in doc("libreria.xml")//libreria let $c := $lib/libro return <total>{count($c)}</total>
-9.- for $lib in doc("libreria.xml")//libreria let $c := $lib/libro return ($c/titulo/text(), <total>{count($c)}</total>)
-10.- let $lib := libreria/libro let $min := min($lib/precio) let $max := max($lib/precio) return (<PrecioMax>{$max}</PrecioMax>, <PrecioMin>{$min}</PrecioMin>)
-11.- 
+1.- 
+for $b in doc("libreria.xml")// libreria/libro 
+return $b/titulo/text()
+
+2.- 
+for $b in doc("libreria.xml")// libreria/libro 
+where $b/precio<=30 
+return $b
+
+3.- 
+for $b in doc("libreria.xml")// libreria/libro 
+where $b/precio<=30 
+return $b/titulo
+
+4.- 
+for $b in doc("libreria.xml")// libreria/libro 
+where $b/precio<=30 
+return $b/titulo/text()
+
+5.- 
+for $b in doc("libreria.xml")// libreria/libro 
+where $b/año=2005 
+return 
+<lib2005>
+	Titulo: {$b/titulo/text()}, 
+	Autor: {$b/autor/text()}
+</lib2005>
+
+6.- 
+let $años := libreria/libro/año 
+return 
+<publicacion>
+	{$años/text()}
+</publicacion>
+
+7.- 
+for $lib in doc("libreria.xml")//libreria/libro 
+order by @categoria, $lib/titulo 
+return $lib
+
+8.- 
+for $lib in doc("libreria.xml")//libreria 
+let $c := $lib/libro 
+return <total>{count($c)}</total>
+
+9.- 
+for $lib in doc("libreria.xml")//libreria 
+let $c := $lib/libro 
+return ($c/titulo/text(), <total>{count($c)}</total>)
+
+10.- 
+let $lib := libreria/libro 
+let $min := min($lib/precio) 
+let $max := max($lib/precio) 
+return (<PrecioMax>{$max}</PrecioMax>, <PrecioMin>{$min}</PrecioMin>)
+
+11.-
+declare option output:indent "yes";
+for $libro in //libro
+let $precioIVA := $libro/precio * 1.21
+order by $precioIVA
+return 
+<libro>
+  <titulo>{$libro/titulo/text()}</titulo>
+  {$libro/precio}
+  <precioIVA>{$precioIVA}</precioIVA>
+</libro>
+
+12.-
+declare option output:indent "yes";
+let $precio := //libro/precio
+let $total := sum($precio)
+return <total>{$total}</total>
+
+13.-
+declare option output:indent "yes";
+let $precio := //libro/precio
+let $total := sum($precio)
+return ($precio, <total>{$total}</total>)
+
+14.-
+declare option output:indent "yes";
+for $libro in //libro
+let $autores := count($libro/autor)
+return
+<libro>
+  <titulo>{$libro/titulo/text()}</titulo>
+  <numAutores>{$autores}</numAutores>
+</libro>
+
+15.-
+declare option output:indent "yes";
+for $libro in //libro
+let $autores := count($libro/autor)
+return
+<libro>{$libro/titulo/text()}, ({$autores})</libro>
+
+16.-
+declare option output:indent "yes";
+for $libro in //libro
+where ends-with($libro/año, "3")
+return $libro
+
+17.-
+declare option output:indent "yes";
+for $libro in //libro
+where starts-with($libro/@categoria, "C")
+return $libro
+
+18.-
+declare option output:indent "yes";
+for $libro in //libro
+where contains($libro/titulo, "X") or contains($libro/titulo, "x")
+order by titulo ascending
+return $libro
+
+19.-
+declare option output:indent "yes";
+for $titulo in //libro/titulo/text()
+let $numChar := string-length($titulo)
+return 
+<libro>
+  <titulo>{$titulo}</titulo>
+  <numCaracteres>{$numChar}</numCaracteres>
+</libro>
+
+20.-
+declare option output:indent "yes";
+for $año in distinct-values(//libro/año)
+return <año>{$año}</año>
+
+21.-
+declare option output:indent "yes";
+for $autor in distinct-values(//libro/autor)
+let $numChar := string-length($autor)
+order by $numChar
+return <autor>{$autor}</autor> 

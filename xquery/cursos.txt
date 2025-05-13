@@ -1,0 +1,98 @@
+1.- 
+for $curso in //cursos/curso
+where $curso/precio[@cuota = "mensual"]
+return <cursoMensual>{$curso/nombre/text()}</cursoMensual>
+
+2.-
+for $curso in //cursos/curso
+return <cursillos>{$curso/nombre/text()} ({ $curso/plazas/text()})</cursillos>
+
+3.-
+for $curso in //cursos/curso
+where $curso[precio > 30] and $curso/precio[@moneda = "euro"]
+return $curso/nombre
+
+4.-
+for $curso in //cursos/curso
+where contains($curso/comienzo, "/1/") 
+return <curso>{$curso/nombre, $curso/comienzo}</curso>
+
+5.-
+for $curso in //cursos/curso 
+order by $curso/aula
+return <curso>{$curso/profesor, $curso/aula}</curso>
+
+6.-
+for $profesor in distinct-values(//curso/profesor)
+let $aulas := //curso[profesor = $profesor]/aula
+order by $profesor
+return <profesor><nombre>{$profesor}</nombre>{$aulas}</profesor>
+
+7.-
+let $precio := //curso/precio/number()
+let $precioMedio := avg($precio)
+return <precioMedio>{$precioMedio}</precioMedio>
+
+8.-
+let $precioAula1 := //curso[aula = "1"]/precio
+let $sumaAula1 := sum($precioAula1)
+return <total_aula_1>{$sumaAula1}</total_aula_1>
+
+9.-
+let $plazasPG := //curso[profesor = "Pablo Garcia"]/plazas
+let $sumaPlazasPG := sum($plazasPG)
+return <PabloGarcia><plazas>{$sumaPlazasPG}</plazas></PabloGarcia>
+
+10.-
+let $cursoAL := //curso[profesor = "Alberto Lozano"]
+return <sueldoMaximo>{$cursoAL/plazas * $cursoAL/precio}</sueldoMaximo>
+
+11.-
+for $curso in //curso[profesor = "Juan de Dios"]
+let $beneficio := $curso/plazas * $curso/precio
+return <curso>{$curso/nombre} <beneficio>{$beneficio}</beneficio></curso>
+
+12.-
+let $curso := //curso[contains(profesor, "Alberto")]
+let $beneficio := $curso/plazas * $curso/precio
+return <Alberto><beneficio>{$beneficio}</beneficio></Alberto>
+
+13.-
+declare option output:indent "yes";
+for $curso in //curso
+let $descuento := $curso/precio*0.85
+order by $curso/nombre
+return 
+<curso>
+  {$curso/nombre}
+  <precio>{$curso/precio/text()}</precio>
+  <fam_numerosa>{$descuento}</fam_numerosa>
+</curso>
+
+14.-
+declare option output:indent "yes";
+for $curso in //curso
+return $curso/* except ($curso/comienzo, $curso/fin)
+
+15.-
+declare option output:indent "yes";
+<table>{
+for $curso in //curso
+let $datos := <tr><td>{$curso/nombre/text()}</td><td>{$curso/profesor/text()}</td></tr>
+return $datos
+}</table>
+
+16.-
+declare option output:indent "yes";
+let $mediaPrecios := avg(//curso/precio)
+return (
+<resultado>
+  <precioMedio>{$mediaPrecios}</precioMedio>
+  <curso>
+  {
+    for $cursosValidos in //curso[precio > $mediaPrecios]
+    return ($cursosValidos/nombre, <precio>{$cursosValidos/precio/text()}</precio>)
+  }
+ </curso>
+</resultado>
+)

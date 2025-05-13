@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cursos>
+  <curso id="1">
+    <nombre>Aprende a programar desde cero</nombre>
+    <precio cuota="mensual" moneda="euro">27</precio>
+    <plazas>20</plazas>
+    <comienzo>1/1/2011</comienzo>
+    <fin>1/12/2011</fin>
+    <profesor>Pablo Garcia</profesor>
+    <aula>1</aula>
+  </curso>
+  <curso id="2">
+    <nombre>Planificación de redes locales</nombre>
+    <precio cuota="trimestral" moneda="euro">80</precio>
+    <plazas>18</plazas>
+    <comienzo>1/2/2011</comienzo>
+    <fin>31/7/2011</fin>
+    <profesor>Pablo Garcia</profesor>
+    <aula>1</aula>
+  </curso>
+  <curso id="3">
+    <nombre>Creación de una aplicación CRUD en Laravel</nombre>
+    <precio cuota="mensual" moneda="euro">30</precio>
+    <plazas>15</plazas>
+    <comienzo>1/3/2011</comienzo>
+    <fin>1/12/2011</fin>
+    <profesor>Juan de Dios</profesor>
+    <aula>1</aula>
+  </curso>
+  <curso id="4">
+    <nombre>Gestión de usuarios en Sistemas Operativos en red</nombre>
+    <precio cuota="trimestral" moneda="dolares">75</precio>
+    <plazas>12</plazas>
+    <comienzo>1/1/2011</comienzo>
+    <fin>1/12/2011</fin>
+    <profesor>Alberto Lozano</profesor>
+    <aula>2</aula>
+  </curso>
+  <curso id="5">
+    <nombre>Github desde cero</nombre>
+    <precio cuota="mensual" moneda="euro">32</precio>
+    <plazas>10</plazas>
+    <comienzo>1/5/2011</comienzo>
+    <fin>1/12/2011</fin>
+    <profesor>Pablo Garcia</profesor>
+    <aula>2</aula>
+  </curso>
+  <curso id="6">
+    <nombre>Unity</nombre>
+    <precio cuota="anual" moneda="euro">320</precio>
+    <plazas>8</plazas>
+    <comienzo>1/1/2011</comienzo>
+    <fin>31/12/2011</fin>
+    <profesor>Juan de Dios</profesor>
+    <aula>1</aula>
+  </curso>
+</cursos>
