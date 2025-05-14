@@ -10,9 +10,24 @@
 </style>
 <script type="text/javascript">
     function informacion(elEvento) {
+		let ancho = tamanoVentanaNavegador()[0];
+		let alto = tamanoVentanaNavegador()[1];
+		let mensaje = "";
 	    var evento = elEvento || window.event;
-	
-	    muestraInformacion();
+
+		if (evento.clientX < ancho/2) {
+			mensaje = "Izquierda";
+		} else {
+			mensaje = "Derecha";
+		}
+
+		if (evento.clientY > alto/2) {
+			mensaje += " abajo";
+		} else {
+			mensaje += " arriba";
+		}
+		
+	    muestraInformacion(mensaje);
     }
 
     function muestraInformacion(mensaje) {

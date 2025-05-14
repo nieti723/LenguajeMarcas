@@ -5,4 +5,92 @@ where $mecanico[@edad > 30]
 return concat($mecanico/taller/text(), ",") 
 
 2.-
+declare option output:indent "yes";
+for $reparacion in //reparacion[precio > 350]
+let $averia := //averia[@numaveria = $reparacion/numaveria]
+where $averia[taller = "Utrera"] 
+return $averia/nombreaveria
+
+3.-
+declare option output:indent "yes";
+for $pieza in //pieza 
+for $averia in //averia[taller = $pieza/taller]
+return concat($pieza/nombrepieza/text(), " en el mismo taller que avería de ", $averia/nombreaveria/text(), "-----")
+
+4.-
+declare option output:indent "yes";
+for $pieza in //pieza
+for $pieza2 in //pieza
+where $pieza[color = $pieza2/color] and $pieza != $pieza2
+return
+concat($pieza/nombrepieza, " tiene el mismo color que ", $pieza2/nombrepieza, ", el color es: ", $pieza/color
+)
+
+5.-
+declare option output:indent "yes";
+for $mecanico in //mecanico
+let $cadena := //pieza[nombrepieza = "Cadena"]
+let $reparacion := //reparacion[numpieza = $cadena/@numpieza]
+where $mecanico/@nummec = $reparacion/nummec 
+return <mecanico>{$mecanico/nombremec/text()}</mecanico>
+
+6.-
+declare option output:indent "yes";
+for $piezaVerde in //pieza[color = "Verde"]
+let $reparacion := //reparacion[numpieza = $piezaVerde/@numpieza]
+let $media := avg($reparacion/precio)
+return <preciomedio>{$media}</preciomedio>
+
+7.-
+declare option output:indent "yes";
+for $pieza in //pieza[color = "Rojo"]
+let $reparacion := //reparacion[numpieza = $pieza/@numpieza]
+let $media := avg($reparacion/precio)
+return 
+<pieza>
+  {$pieza/nombrepieza}
+  <mediareparacion>{$media}</mediareparacion>
+</pieza>
+
+8.-
+declare option output:indent "yes";
+let $averia := //averia[taller = "Utrera"]
+let $reparacion := //reparacion[numaveria = $averia/@numaveria]
+let $suma := sum($reparacion/precio)
+return <totalUtrera>{$suma}</totalUtrera>
+
+9.-
+declare option output:indent "yes";
+for $mec in //mecanico
+let $rep := //reparacion[nummec = $mec/@nummec]
+let $av := //averia[@numaveria = $rep/numaveria]
+return 
+<mecanico>
+  <nombre>{$mec/nombremec/text()}</nombre>
+  {
+    for $av in //averia[@numaveria = $rep/numaveria]
+    return <averia>{$av/nombreaveria/text()}</averia>
+  }
+</mecanico>
+
+10.-
+declare option output:indent "yes";
+let $rep := //reparacion/precio
+let $max := max($rep)
+let $repMax := //reparacion[precio = $max]
+let $av := //averia[@numaveria = $repMax/numaveria]
+return 
+<masCara>
+  {$av/nombreaveria}
+  <precio>{$max}</precio>
+</masCara>
+
+11.-
+declare option output:indent "yes";
+let $mec := //mecanico[@edad < 30]
+let $rep := //reparacion[nummec = $mec/@nummec]
+return 
+  for $rep in //reparacion[nummec = $mec/@nummec]
+  let $pieza := //pieza[@numpieza = $rep/numpieza]
+  return $pieza/nombrepieza
 
